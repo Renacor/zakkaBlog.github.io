@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="¶前置准备  node.js和npm git  ¶安装HEXO 12$ npm install -g hexo-cli  $ npm install hexo-server --save ¶新建项目并运行 1234$ hexo init blog$ cd blog$ npm install$ hexo server 至此博客项目新建完成 ¶更换主题  找到喜欢的主题的github地址  1234c">
+  <meta name="description" content="记录博客配置的全过程。">
 <meta name="keywords" content="配置">
 <meta property="og:type" content="article">
 <meta property="og:title" content="First Blog">
 <meta property="og:url" content="http://yoursite.com/2019/10/08/first-blog/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="¶前置准备  node.js和npm git  ¶安装HEXO 12$ npm install -g hexo-cli  $ npm install hexo-server --save ¶新建项目并运行 1234$ hexo init blog$ cd blog$ npm install$ hexo server 至此博客项目新建完成 ¶更换主题  找到喜欢的主题的github地址  1234c">
+<meta property="og:description" content="记录博客配置的全过程。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-08T08:31:16.919Z">
+<meta property="og:updated_time" content="2019-10-09T08:30:55.193Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="First Blog">
-<meta name="twitter:description" content="¶前置准备  node.js和npm git  ¶安装HEXO 12$ npm install -g hexo-cli  $ npm install hexo-server --save ¶新建项目并运行 1234$ hexo init blog$ cd blog$ npm install$ hexo server 至此博客项目新建完成 ¶更换主题  找到喜欢的主题的github地址  1234c">
+<meta name="twitter:description" content="记录博客配置的全过程。">
   <link rel="canonical" href="http://yoursite.com/2019/10/08/first-blog/">
 
 
@@ -184,6 +184,17 @@
       
       
         
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+      
+      
+        
         <li class="menu-item menu-item-archives">
       
     
@@ -241,12 +252,33 @@
                 
               
 
-              <time title="创建时间：2019-10-08 14:05:01 / 修改时间：16:31:16" itemprop="dateCreated datePublished" datetime="2019-10-08T14:05:01+08:00">2019-10-08</time>
+              <time title="创建时间：2019-10-08 14:05:01" itemprop="dateCreated datePublished" datetime="2019-10-08T14:05:01+08:00">2019-10-08</time>
             </span>
           
             
 
             
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 16:30:55" itemprop="dateModified" datetime="2019-10-09T16:30:55+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/HEXO/" itemprop="url" rel="index"><span itemprop="name">HEXO</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -260,7 +292,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="前置准备"><a class="header-anchor" href="#前置准备">¶</a>前置准备</h4>
+        <p>记录博客配置的全过程。</p>
+ <a id="more"></a>
+<h4 id="前置准备"><a class="header-anchor" href="#前置准备">¶</a>前置准备</h4>
 <ol>
 <li>node.js和npm</li>
 <li>git</li>
@@ -303,18 +337,17 @@
 提交到github: hexo d</p>
 </blockquote>
 <h4 id="添加版权说明"><a class="header-anchor" href="#添加版权说明">¶</a>添加版权说明</h4>
-<p>在themes\hiker\layout_partial新建文件copyright.ejs<br>
-打开copyright.ejs,添加一下内容。</p>
+<p>在<em>themes\hiker\layout_partial新建文件copyright.ejs</em><br>
+打开<em>copyright.ejs</em>,添加一下内容。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"post-copyright"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"post-copyright-author"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">__</span>('<span class="attr">copyright.author</span>') %&gt;</span> <span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.author</span>%&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"post-copyright-link"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">__</span>('<span class="attr">copyright.link</span>') %&gt;</span> <span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- config.root %&gt;&lt;%- post.path %&gt;"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"&lt;%= post.title %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">config.url</span> %&gt;</span>/<span class="tag">&lt;<span class="name">%-</span> <span class="attr">post.path</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"post-copyright-license"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">__</span>('<span class="attr">copyright.license_title</span>') %&gt;</span>  <span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">%=</span> <span class="attr">__</span>('<span class="attr">copyright.left_license_content</span>') %&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">rel</span>=<span class="string">"license"</span> <span class="attr">href</span>=<span class="string">"https://creativecommons.org/licenses/by-nc-nd/4.0/"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"</span>&gt;</span>CC BY-NC-ND 4.0<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">%=</span> <span class="attr">__</span>('<span class="attr">copyright.right_license_content</span>') %&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>打开themes\hiker\layout_partial\article.ejs添加一下内容,位置介于donate和comment之间</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (!index &amp;&amp; theme.donate.enable)&#123; %&gt;</span><br><span class="line">        &lt;%- partial(&apos;donate&apos;) %&gt;</span><br><span class="line">      &lt;% &#125; %&gt;</span><br><span class="line">       &lt;!-- 要添加的内容 --&gt;</span><br><span class="line">      &lt;% if (!index &amp;&amp; theme.copyright.enable)&#123; %&gt;</span><br><span class="line">      &lt;%- partial(&apos;copyright&apos;) %&gt;</span><br><span class="line">      &lt;% &#125; %&gt;</span><br><span class="line">      &lt;!----&gt;</span><br><span class="line">      &lt;% if (!index &amp;&amp; post.comments &amp;&amp; (theme.gentie_productKey || theme.duoshuo_shortname || theme.disqus_shortname || theme.uyan_uid || theme.wumii || theme.livere_shortname))&#123; %&gt;</span><br><span class="line">        &lt;%- partial(&apos;comment&apos;) %&gt;</span><br><span class="line">      &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
-<p>修改themes\hiker\source\css_partial\article.styl,在末端添加以下内容。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.post-copyright &#123;</span><br><span class="line">    margin: 2em 0 0;</span><br><span class="line">    padding: 0.5em 1em;</span><br><span class="line">    border-left: 3px solid #FF1700;</span><br><span class="line">    background-color: #F9F9F9;</span><br><span class="line">    list-style: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.post-copyright li &#123;</span><br><span class="line">    line-height: 30px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在themes\hiker\languages中,找到你应用的语言文件,例如zh-TW,打开并添加以下内容。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">copyright:</span><br><span class="line">    author: &quot;作者: &quot;</span><br><span class="line">    link: &quot;文章连结: &quot;</span><br><span class="line">    license_title: &quot;版权声明: &quot;</span><br><span class="line">    left_license_content: &quot;本网志所有文章除特别声明外,均采用 &quot;</span><br><span class="line">    right_license_content: &quot;许可协议。转载请注明出处!&quot;</span><br></pre></td></tr></table></figure>
-<p>打开themes\hiker_config.yml,添加以下内容。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#版权信息</span><br><span class="line">copyright:</span><br><span class="line">    enable: true</span><br></pre></td></tr></table></figure>
-<p>最后当然是 hexo clean &amp;&amp; hexo g &amp;&amp; hexo d 就可以看到结果了</p>
+<p>打开<em>themes\hiker\layout_partial\article.ejs</em>添加一下内容,位置介于<em>donate</em>和c<em>omment</em>之间</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">theme.donate.enable</span>)&#123; %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">donate</span>') %&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">       <span class="comment">&lt;!-- 要添加的内容 --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">theme.copyright.enable</span>)&#123; %&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">copyright</span>') %&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">      <span class="comment">&lt;!----&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">post.comments</span> &amp;&amp; (<span class="attr">theme.gentie_productKey</span> || <span class="attr">theme.duoshuo_shortname</span> || <span class="attr">theme.disqus_shortname</span> || <span class="attr">theme.uyan_uid</span> || <span class="attr">theme.wumii</span> || <span class="attr">theme.livere_shortname</span>))&#123; %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">comment</span>') %&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<p>修改<em>themes\hiker\source\css_partial\article.styl</em>,在末端添加以下内容。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.post-copyright</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">2em</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0.5em</span> <span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">3px</span> solid <span class="number">#FF1700</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#F9F9F9</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.post-copyright</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">30px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在<em>themes\hiker\languages</em>中,找到你应用的语言文件,例如zh-TW,打开并添加以下内容。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">copyright:</span></span><br><span class="line"><span class="attr">    author:</span> <span class="string">"作者: "</span></span><br><span class="line"><span class="attr">    link:</span> <span class="string">"文章连结: "</span></span><br><span class="line"><span class="attr">    license_title:</span> <span class="string">"版权声明: "</span></span><br><span class="line"><span class="attr">    left_license_content:</span> <span class="string">"本网志所有文章除特别声明外,均采用 "</span></span><br><span class="line"><span class="attr">    right_license_content:</span> <span class="string">"许可协议。转载请注明出处!"</span></span><br></pre></td></tr></table></figure>
+<p>打开<em>themes\hiker_config.yml</em>,添加以下内容。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#版权信息</span></span><br><span class="line"><span class="attr">copyright:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <h4 id="markdown解析器替换"><a class="header-anchor" href="#markdown解析器替换">¶</a>markdown解析器替换</h4>
 <p>hexo自带的markdown解析器为GFM风格，与标准的markdown语法有些许不同且支持的语法较少，往往无法满足更专业的需求。<br>
 hexo-renderer-markdown-it 是一款用于 Markdown 解析和渲染的插件。</p>
@@ -322,10 +355,10 @@ hexo-renderer-markdown-it 是一款用于 Markdown 解析和渲染的插件。</
 <li>用于替换 Hexo 默认自带的 Markdown 渲染器。</li>
 <li>提供了更丰富的 Markdown 解析和渲染。</li>
 </ul>
-<p><span style="color: #5a7bee;font-weight:500;">首先请确保以下操作是在博客项目的根目录进行</span></p>
+<p><strong>首先请确保以下操作是在博客项目的根目录进行</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save // 卸载 Hexo 默认自带的 Markdown 渲染器</span><br><span class="line">npm i hexo-renderer-markdown-it --save // 安装 hexo-renderer-markdown-it 插件</span><br></pre></td></tr></table></figure>
 <p>打开根目录下的_config.yml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># Markdown-it config</span><br><span class="line">markdown:</span><br><span class="line">  render:</span><br><span class="line">    html: true</span><br><span class="line">    xhtmlOut: false</span><br><span class="line">    breaks: true</span><br><span class="line">    linkify: true</span><br><span class="line">    typographer: true</span><br><span class="line">    quotes: &apos;“”‘’&apos;</span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br><span class="line">  anchors:</span><br><span class="line">    level: 2</span><br><span class="line">    collisionSuffix: &apos;v&apos;</span><br><span class="line">    permalink: true</span><br><span class="line">    permalinkClass: header-anchor</span><br><span class="line">    permalinkSymbol: ¶</span><br></pre></td></tr></table></figure><hr class="footnotes-sep">
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line"><span class="attr">markdown:</span></span><br><span class="line"><span class="attr">  render:</span></span><br><span class="line"><span class="attr">    html:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    xhtmlOut:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">    breaks:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    linkify:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    typographer:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    quotes:</span> <span class="string">'“”‘’'</span></span><br><span class="line"><span class="attr">  plugins:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">markdown-it-abbr</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">markdown-it-footnote</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">markdown-it-ins</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">markdown-it-sub</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">markdown-it-sup</span></span><br><span class="line"><span class="attr">  anchors:</span></span><br><span class="line"><span class="attr">    level:</span> <span class="number">2</span></span><br><span class="line"><span class="attr">    collisionSuffix:</span> <span class="string">'v'</span></span><br><span class="line"><span class="attr">    permalink:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    permalinkClass:</span> <span class="string">header-anchor</span></span><br><span class="line"><span class="attr">    permalinkSymbol:</span> <span class="string">¶</span></span><br></pre></td></tr></table></figure><hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>名称后缀是固定的，不可更改。当配置完成后在github访问域名时，如进去的页面显示404，解决的方法为：①配置个人域名②仓库的名称改为github的用户名 <a href="#fnref1" class="footnote-backref">↩</a></p>
@@ -382,6 +415,10 @@ hexo-renderer-markdown-it 是一款用于 Markdown 解析和渲染的插件。</
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/10/08/more-settings/" rel="prev" title="HEXO更多配置">
+                  HEXO更多配置 <i class="fa fa-chevron-right"></i>
+                </a>
               
             </div>
           </div>
@@ -446,8 +483,21 @@ hexo-renderer-markdown-it 是一款用于 Markdown 解析和渲染的插件。</
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
         </a>
       </div>
     
@@ -459,7 +509,7 @@ hexo-renderer-markdown-it 是一款用于 Markdown 解析和渲染的插件。</
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -496,10 +546,17 @@ hexo-renderer-markdown-it 是一款用于 Markdown 解析和渲染的插件。</
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Qian Lina</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">NaNm</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">NaN:aN</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.1</div>
 
         
 
@@ -557,5 +614,5 @@ hexo-renderer-markdown-it 是一款用于 Markdown 解析和渲染的插件。</
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
 </html>
