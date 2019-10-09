@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="实际使用一个主题时，有很多常用的细节上的配置在主题初始时并不会设置好，需要手动找到配置文件中相对应的项进行设置，以目前我正在使用的NextT主题为例,记录下如何进行细节配置。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-09T08:34:25.503Z">
+<meta property="og:updated_time" content="2019-10-09T09:24:14.846Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HEXO更多配置">
 <meta name="twitter:description" content="实际使用一个主题时，有很多常用的细节上的配置在主题初始时并不会设置好，需要手动找到配置文件中相对应的项进行设置，以目前我正在使用的NextT主题为例,记录下如何进行细节配置。">
@@ -263,7 +263,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 16:34:25" itemprop="dateModified" datetime="2019-10-09T16:34:25+08:00">2019-10-09</time>
+                <time title="修改时间：2019-10-09 17:24:14" itemprop="dateModified" datetime="2019-10-09T17:24:14+08:00">2019-10-09</time>
               </span>
             
           
@@ -297,26 +297,26 @@
 <h4 id="显示语言设置"><a class="header-anchor" href="#显示语言设置">¶</a>显示语言设置</h4>
 <h4 id="首页不显示全文"><a class="header-anchor" href="#首页不显示全文">¶</a>首页不显示全文</h4>
 <p>在文章内需要截断的地方添加上标记</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">首页会显示的text1111</span><br><span class="line"> &lt;!-- more --&gt;</span><br><span class="line">在首页会隐藏的text22222</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">首页会显示的text1111</span><br><span class="line"><span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line">在首页会隐藏的text22222</span><br></pre></td></tr></table></figure>
 <h4 id="首页出现菜单内容以及菜单内容对应路径文件"><a class="header-anchor" href="#首页出现菜单内容以及菜单内容对应路径文件">¶</a>首页出现菜单内容以及菜单内容对应路径文件</h4>
 <h4 id="文章添加分类和tag"><a class="header-anchor" href="#文章添加分类和tag">¶</a>文章添加分类和tag</h4>
 <p>在文章的开头指定配置tag和分类即可，如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">tags: 配置 // tag</span><br><span class="line">categories: HEXO // 分类</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">tags: 配置 // tag</span><br><span class="line">categories: HEXO // 分类</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <h4 id="文章插入图片"><a class="header-anchor" href="#文章插入图片">¶</a>文章插入图片</h4>
-<p>把主页配置文件*_config.yml<em>里的</em>post_asset_folder*这个选项设置为true<br>
-在hexo的目录下执行npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">https://github.com/CodeFalling/hexo-asset-image</a> --save（需要等待一段时间）。<br>
-完成安装后用hexo新建文章的时候会发现_posts目录下面会多出一个和文章名字一样的文件夹。图片就可以放在文件夹下面</p>
+<p>把主页配置文件 <em>_config.yml</em> 里的 <em>post_asset_folder</em>这个选项设置为true<br>
+在hexo的目录下执行<code>npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">https://github.com/CodeFalling/hexo-asset-image</a> --save</code>（需要等待一段时间）。<br>
+完成安装后用hexo新建文章的时候会发现 <em>_posts</em> 目录下面会多出一个和文章名字一样的文件夹。图片就可以放在文件夹下面</p>
 <h4 id="修改样式和添加自定义样式"><a class="header-anchor" href="#修改样式和添加自定义样式">¶</a>修改样式和添加自定义样式</h4>
-<p>打开文件： 根目录\themes[themeName]\source\css_custom\custom.styl,在该文件中自定义样式</p>
+<p>打开文件： <em>根目录\themes[themeName]\source\css_custom\custom.styl</em>,在该文件中自定义样式</p>
 <h4 id="文章字数统计和预计阅读时长"><a class="header-anchor" href="#文章字数统计和预计阅读时长">¶</a>文章字数统计和预计阅读时长</h4>
 <p>字数统计和预计阅读市场需要在两处进行配置<br>
-nextT自带的字数统计工具是hexo-symbols-count-time，首先需要确认已安装</p>
+nextT自带的字数统计工具是<em>hexo-symbols-count-time</em>，首先需要确认已安装</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save // 安装hexo-symbols-count-time</span><br></pre></td></tr></table></figure>
 <p><strong>配置项修改</strong><br>
-首先在博客的根目录下的配置文件_config.yml里配置以下内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line"> #文章内是否显示</span><br><span class="line">  symbols: true</span><br><span class="line">  time: true</span><br><span class="line"> # 网页底部是否显示</span><br><span class="line">  total_symbols: true</span><br><span class="line">  total_time: true</span><br></pre></td></tr></table></figure>
+首先在博客的根目录下的配置文件*_config.yml*里配置以下内容</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line"> <span class="comment">#文章内是否显示</span></span><br><span class="line"><span class="attr">  symbols:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  time:</span> <span class="literal">true</span></span><br><span class="line"> <span class="comment"># 网页底部是否显示</span></span><br><span class="line"><span class="attr">  total_symbols:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_time:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>然后在主题的配置文件中配置以下内容,具体参数意义详见<a href="https://github.com/theme-next/hexo-symbols-count-time" target="_blank" rel="noopener">hexo-symbols-count-time</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true</span><br><span class="line">  #文章中的显示是否显示文字（本文字数|阅读时长） </span><br><span class="line">  item_text_post: true</span><br><span class="line">  #网页底部的显示是否显示文字（站点总字数|站点阅读时长） </span><br><span class="line">  item_text_total: false</span><br><span class="line">  # Average Word Length (chars count in word)</span><br><span class="line">  awl: 4</span><br><span class="line">  # Words Per Minute</span><br><span class="line">  wpm: 275</span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line"><span class="attr">  separated_meta:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment">#文章中的显示是否显示文字（本文字数|阅读时长） </span></span><br><span class="line"><span class="attr">  item_text_post:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment">#网页底部的显示是否显示文字（站点总字数|站点阅读时长） </span></span><br><span class="line"><span class="attr">  item_text_total:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Average Word Length (chars count in word)</span></span><br><span class="line"><span class="attr">  awl:</span> <span class="number">4</span></span><br><span class="line">  <span class="comment"># Words Per Minute</span></span><br><span class="line"><span class="attr">  wpm:</span> <span class="number">275</span></span><br></pre></td></tr></table></figure>
 <h4 id="评论-打赏-rss功能"><a class="header-anchor" href="#评论-打赏-rss功能">¶</a>评论，打赏，RSS功能</h4>
 <h4 id="广告位-x"><a class="header-anchor" href="#广告位-x">¶</a>广告位(X</h4>
 <h4 id="配置live2d宠物"><a class="header-anchor" href="#配置live2d宠物">¶</a>配置live2d宠物</h4>
@@ -452,7 +452,7 @@ nextT自带的字数统计工具是hexo-symbols-count-time，首先需要确认�
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -506,12 +506,12 @@ nextT自带的字数统计工具是hexo-symbols-count-time，首先需要确认�
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">NaNm</span>
+    <span title="站点总字数">6k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">NaN:aN</span>
+    <span title="站点阅读时长">6 分钟</span>
 </div>
 
         
