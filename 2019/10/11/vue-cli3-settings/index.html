@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="都说功能实现不难，优化才是最难的。想想的确是这样，正因为优化是永无止境的，且实际项目中千变万化的需求有各种相对应的优化点，所以优化是永远的难点 普遍意义上我们认为一个通用的优化点主要是静态资源和网络请求优化，但是这次在项目中遇到了展示的大数据内容的需求，在开发过程中仅因为数据量大这一点没少遇到问题 本文就主要记录本次项目中遇到的问题和解决方案，以及由此归纳出的对大数据产品来说至关重要的几项优化点。">
-<meta name="keywords" content="JavaScript">
+  <meta name="description" content="¶vue-cli 3.0 配置项 vue-cli 3.0在创建项目时，推荐选择第二项自定义确认每一项配置 ¶用jest对vue项目进行单元测试">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端性能优化总结">
-<meta property="og:url" content="http://yoursite.com/2019/10/09/about-performance/index.html">
+<meta property="og:title" content="vue-cli3 settings">
+<meta property="og:url" content="http://yoursite.com/2019/10/11/vue-cli3-settings/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="都说功能实现不难，优化才是最难的。想想的确是这样，正因为优化是永无止境的，且实际项目中千变万化的需求有各种相对应的优化点，所以优化是永远的难点 普遍意义上我们认为一个通用的优化点主要是静态资源和网络请求优化，但是这次在项目中遇到了展示的大数据内容的需求，在开发过程中仅因为数据量大这一点没少遇到问题 本文就主要记录本次项目中遇到的问题和解决方案，以及由此归纳出的对大数据产品来说至关重要的几项优化点。">
+<meta property="og:description" content="¶vue-cli 3.0 配置项 vue-cli 3.0在创建项目时，推荐选择第二项自定义确认每一项配置 ¶用jest对vue项目进行单元测试">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-11T01:59:03.418Z">
+<meta property="og:updated_time" content="2019-10-11T05:37:40.811Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端性能优化总结">
-<meta name="twitter:description" content="都说功能实现不难，优化才是最难的。想想的确是这样，正因为优化是永无止境的，且实际项目中千变万化的需求有各种相对应的优化点，所以优化是永远的难点 普遍意义上我们认为一个通用的优化点主要是静态资源和网络请求优化，但是这次在项目中遇到了展示的大数据内容的需求，在开发过程中仅因为数据量大这一点没少遇到问题 本文就主要记录本次项目中遇到的问题和解决方案，以及由此归纳出的对大数据产品来说至关重要的几项优化点。">
-  <link rel="canonical" href="http://yoursite.com/2019/10/09/about-performance/">
+<meta name="twitter:title" content="vue-cli3 settings">
+<meta name="twitter:description" content="¶vue-cli 3.0 配置项 vue-cli 3.0在创建项目时，推荐选择第二项自定义确认每一项配置 ¶用jest对vue项目进行单元测试">
+  <link rel="canonical" href="http://yoursite.com/2019/10/11/vue-cli3-settings/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>前端性能优化总结 | Blog</title>
+  <title>vue-cli3 settings | Blog</title>
   
 
 
@@ -224,7 +224,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/09/about-performance/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/11/vue-cli3-settings/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qian Lina">
@@ -236,7 +236,7 @@
       <meta itemprop="name" content="Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">前端性能优化总结
+        <h1 class="post-title" itemprop="name headline">vue-cli3 settings
 
           
         </h1>
@@ -252,33 +252,12 @@
                 
               
 
-              <time title="创建时间：2019-10-09 11:06:34" itemprop="dateCreated datePublished" datetime="2019-10-09T11:06:34+08:00">2019-10-09</time>
+              <time title="创建时间：2019-10-11 13:34:38 / 修改时间：13:37:40" itemprop="dateCreated datePublished" datetime="2019-10-11T13:34:38+08:00">2019-10-11</time>
             </span>
           
             
 
             
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-11 09:59:03" itemprop="dateModified" datetime="2019-10-11T09:59:03+08:00">2019-10-11</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -292,24 +271,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>都说功能实现不难，优化才是最难的。想想的确是这样，正因为优化是永无止境的，且实际项目中千变万化的需求有各种相对应的优化点，所以优化是永远的难点</p>
-<p>普遍意义上我们认为一个通用的优化点主要是静态资源和网络请求优化，但是这次在项目中遇到了展示的大数据内容的需求，在开发过程中仅因为数据量大这一点没少遇到问题</p>
-<p>本文就主要记录本次项目中遇到的问题和解决方案，以及由此归纳出的对大数据产品来说至关重要的几项优化点。</p>
- <a id="more"></a>
-<h4 id="代码写法"><a class="header-anchor" href="#代码写法">¶</a>代码写法</h4>
-<p>在普通项目中，提到前端性能优化，一般认为优化点会着重在构建优化或者静态资源优化，但是在数据量极大的项目中，我们一般首要的需要优化的就是代码写法。<br>
-代码写法的优化在实际项目中能够大幅度提升整体性能</p>
-<h5 id="内存释放"><a class="header-anchor" href="#内存释放">¶</a>内存释放</h5>
-<ul>
-<li>变量</li>
-</ul>
-<p>平时写项目时，一般极少会注意变量的用法，但是在大数据项目中，变量用法对性能的影响巨大。</p>
-<p>例如声明一个全局变量来储存数据，因为全局变量的特性，让需要在多处进行不同处理的数据变得更简单便捷,但同时也因为全局变量在调用的方法执行完之后不会销毁的特性，如将全局变量用于储存数据量极大的数据时，就会给浏览器内存造成极大的负担</p>
-<p>因此在项目中尽量用局部变量来储存数据量大的数据，方法执行完成后及时回收</p>
-<h5 id="常用数据优化的方法"><a class="header-anchor" href="#常用数据优化的方法">¶</a>常用数据优化的方法</h5>
-<h5 id="框架内自带优化方法"><a class="header-anchor" href="#框架内自带优化方法">¶</a>框架内自带优化方法</h5>
-<h4 id="数据接收"><a class="header-anchor" href="#数据接收">¶</a>数据接收</h4>
-<h4 id="数据渲染"><a class="header-anchor" href="#数据渲染">¶</a>数据渲染</h4>
+        <h4 id="vue-cli-3-0-配置项"><a class="header-anchor" href="#vue-cli-3-0-配置项">¶</a>vue-cli 3.0 配置项</h4>
+<p>vue-cli 3.0在创建项目时，推荐选择第二项自定义确认每一项配置</p>
+<h4 id="用jest对vue项目进行单元测试"><a class="header-anchor" href="#用jest对vue项目进行单元测试">¶</a>用jest对vue项目进行单元测试</h4>
 
     </div>
 
@@ -326,7 +290,7 @@
     <strong>本文作者： </strong>Qian Lina</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/10/09/about-performance/" title="前端性能优化总结">http://yoursite.com/2019/10/09/about-performance/</a>
+    <a href="http://yoursite.com/2019/10/11/vue-cli3-settings/" title="vue-cli3 settings">http://yoursite.com/2019/10/11/vue-cli3-settings/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -341,7 +305,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+              <a href="/tags/javascript/" rel="tag"># javascript</a>
             
           </div>
         
@@ -351,8 +315,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/10/08/more-settings/" rel="next" title="HEXO更多配置">
-                  <i class="fa fa-chevron-left"></i> HEXO更多配置
+                <a href="/2019/10/10/es6-notes/" rel="next" title="ES6学习笔记">
+                  <i class="fa fa-chevron-left"></i> ES6学习笔记
                 </a>
               
             </div>
@@ -360,10 +324,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/10/09/commit/" rel="prev" title="前端常用commit规范">
-                  前端常用commit规范 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -409,7 +369,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码写法"><span class="nav-number">1.</span> <span class="nav-text">¶代码写法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#内存释放"><span class="nav-number">1.1.</span> <span class="nav-text">¶内存释放</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#常用数据优化的方法"><span class="nav-number">1.2.</span> <span class="nav-text">¶常用数据优化的方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#框架内自带优化方法"><span class="nav-number">1.3.</span> <span class="nav-text">¶框架内自带优化方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据接收"><span class="nav-number">2.</span> <span class="nav-text">¶数据接收</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据渲染"><span class="nav-number">3.</span> <span class="nav-text">¶数据渲染</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-cli-3-0-配置项"><span class="nav-number">1.</span> <span class="nav-text">¶vue-cli 3.0 配置项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用jest对vue项目进行单元测试"><span class="nav-number">2.</span> <span class="nav-text">¶用jest对vue项目进行单元测试</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
