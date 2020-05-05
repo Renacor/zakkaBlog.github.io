@@ -55,19 +55,27 @@
   };
 </script>
 
-  <meta name="description" content="都说功能实现不难，优化才是最难的。想想的确是这样，正因为优化是永无止境的，且实际项目中千变万化的需求有各种相对应的优化点，所以优化是永远的难点 普遍意义上我们认为一个通用的优化点主要是静态资源和网络请求优化，但是这次在项目中遇到了展示的大数据内容的需求，在开发过程中仅因为数据量大这一点没少遇到问题 本文就主要记录本次项目中遇到的问题和解决方案，以及由此归纳出的对大数据产品来说至关重要的几项优化点。">
-<meta name="keywords" content="JavaScript">
+  <meta name="description" content="准确的来说，入坑月季的时间是19年。6月的时候在某宝买了三颗月季，品种分别是真宙，心之水滴和诺瓦利斯 三颗来的时候都带着花苞，所以基本上开一轮花应该不是问题，本应该这样，但是实际上第一波花开了的只有真宙和水滴。 真宙和心之水滴很快就开花了，表现良好，但是季节正好是夏，魔都持续高温，再加上是初花，所以花型很散，基本看不出什么型，但是颜色对版，特别是真宙还有股水果香味，还算美丽。原本最期待的蓝色系的诺">
+<meta name="keywords" content="日常">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端性能优化总结">
-<meta property="og:url" content="http://yoursite.com/2019/10/09/about-performance/index.html">
+<meta property="og:title" content="养花大爷">
+<meta property="og:url" content="http://yoursite.com/2019/10/13/life-flowers/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="都说功能实现不难，优化才是最难的。想想的确是这样，正因为优化是永无止境的，且实际项目中千变万化的需求有各种相对应的优化点，所以优化是永远的难点 普遍意义上我们认为一个通用的优化点主要是静态资源和网络请求优化，但是这次在项目中遇到了展示的大数据内容的需求，在开发过程中仅因为数据量大这一点没少遇到问题 本文就主要记录本次项目中遇到的问题和解决方案，以及由此归纳出的对大数据产品来说至关重要的几项优化点。">
+<meta property="og:description" content="准确的来说，入坑月季的时间是19年。6月的时候在某宝买了三颗月季，品种分别是真宙，心之水滴和诺瓦利斯 三颗来的时候都带着花苞，所以基本上开一轮花应该不是问题，本应该这样，但是实际上第一波花开了的只有真宙和水滴。 真宙和心之水滴很快就开花了，表现良好，但是季节正好是夏，魔都持续高温，再加上是初花，所以花型很散，基本看不出什么型，但是颜色对版，特别是真宙还有股水果香味，还算美丽。原本最期待的蓝色系的诺">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-11T01:59:03.418Z">
+<meta property="og:image" content="http://yoursite.com/2019/10/13/life-flowers/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/13/life-flowers/3.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/13/life-flowers/4.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/13/life-flowers/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/13/life-flowers/5.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/13/life-flowers/6.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/13/life-flowers/7.jpg">
+<meta property="og:updated_time" content="2019-10-17T14:35:24.060Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端性能优化总结">
-<meta name="twitter:description" content="都说功能实现不难，优化才是最难的。想想的确是这样，正因为优化是永无止境的，且实际项目中千变万化的需求有各种相对应的优化点，所以优化是永远的难点 普遍意义上我们认为一个通用的优化点主要是静态资源和网络请求优化，但是这次在项目中遇到了展示的大数据内容的需求，在开发过程中仅因为数据量大这一点没少遇到问题 本文就主要记录本次项目中遇到的问题和解决方案，以及由此归纳出的对大数据产品来说至关重要的几项优化点。">
-  <link rel="canonical" href="http://yoursite.com/2019/10/09/about-performance/">
+<meta name="twitter:title" content="养花大爷">
+<meta name="twitter:description" content="准确的来说，入坑月季的时间是19年。6月的时候在某宝买了三颗月季，品种分别是真宙，心之水滴和诺瓦利斯 三颗来的时候都带着花苞，所以基本上开一轮花应该不是问题，本应该这样，但是实际上第一波花开了的只有真宙和水滴。 真宙和心之水滴很快就开花了，表现良好，但是季节正好是夏，魔都持续高温，再加上是初花，所以花型很散，基本看不出什么型，但是颜色对版，特别是真宙还有股水果香味，还算美丽。原本最期待的蓝色系的诺">
+<meta name="twitter:image" content="http://yoursite.com/2019/10/13/life-flowers/2.jpg">
+  <link rel="canonical" href="http://yoursite.com/2019/10/13/life-flowers/">
 
 
 <script id="page-configurations">
@@ -81,7 +89,7 @@
   };
 </script>
 
-  <title>前端性能优化总结 | Blog</title>
+  <title>养花大爷 | Blog</title>
   
 
 
@@ -224,7 +232,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/09/about-performance/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/13/life-flowers/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qian Lina">
@@ -236,7 +244,7 @@
       <meta itemprop="name" content="Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">前端性能优化总结
+        <h1 class="post-title" itemprop="name headline">养花大爷
 
           
         </h1>
@@ -252,7 +260,7 @@
                 
               
 
-              <time title="创建时间：2019-10-09 11:06:34" itemprop="dateCreated datePublished" datetime="2019-10-09T11:06:34+08:00">2019-10-09</time>
+              <time title="创建时间：2019-10-13 21:38:59" itemprop="dateCreated datePublished" datetime="2019-10-13T21:38:59+08:00">2019-10-13</time>
             </span>
           
             
@@ -263,7 +271,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-11 09:59:03" itemprop="dateModified" datetime="2019-10-11T09:59:03+08:00">2019-10-11</time>
+                <time title="修改时间：2019-10-17 22:35:24" itemprop="dateModified" datetime="2019-10-17T22:35:24+08:00">2019-10-17</time>
               </span>
             
           
@@ -273,7 +281,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hide/" itemprop="url" rel="index"><span itemprop="name">hide</span></a></span>
 
                 
                 
@@ -292,24 +300,61 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>都说功能实现不难，优化才是最难的。想想的确是这样，正因为优化是永无止境的，且实际项目中千变万化的需求有各种相对应的优化点，所以优化是永远的难点</p>
-<p>普遍意义上我们认为一个通用的优化点主要是静态资源和网络请求优化，但是这次在项目中遇到了展示的大数据内容的需求，在开发过程中仅因为数据量大这一点没少遇到问题</p>
-<p>本文就主要记录本次项目中遇到的问题和解决方案，以及由此归纳出的对大数据产品来说至关重要的几项优化点。</p>
- <a id="more"></a>
-<h4 id="代码写法"><a class="header-anchor" href="#代码写法">¶</a>代码写法</h4>
-<p>在普通项目中，提到前端性能优化，一般认为优化点会着重在构建优化或者静态资源优化，但是在数据量极大的项目中，我们一般首要的需要优化的就是代码写法。<br>
-代码写法的优化在实际项目中能够大幅度提升整体性能</p>
-<h5 id="内存释放"><a class="header-anchor" href="#内存释放">¶</a>内存释放</h5>
-<ul>
-<li>变量</li>
-</ul>
-<p>平时写项目时，一般极少会注意变量的用法，但是在大数据项目中，变量用法对性能的影响巨大。</p>
-<p>例如声明一个全局变量来储存数据，因为全局变量的特性，让需要在多处进行不同处理的数据变得更简单便捷,但同时也因为全局变量在调用的方法执行完之后不会销毁的特性，如将全局变量用于储存数据量极大的数据时，就会给浏览器内存造成极大的负担</p>
-<p>因此在项目中尽量用局部变量来储存数据量大的数据，方法执行完成后及时回收</p>
-<h5 id="常用数据优化的方法"><a class="header-anchor" href="#常用数据优化的方法">¶</a>常用数据优化的方法</h5>
-<h5 id="框架内自带优化方法"><a class="header-anchor" href="#框架内自带优化方法">¶</a>框架内自带优化方法</h5>
-<h4 id="数据接收"><a class="header-anchor" href="#数据接收">¶</a>数据接收</h4>
-<h4 id="数据渲染"><a class="header-anchor" href="#数据渲染">¶</a>数据渲染</h4>
+        <p>准确的来说，入坑月季的时间是19年。6月的时候在某宝买了三颗月季，品种分别是真宙，心之水滴和诺瓦利斯<br>
+三颗来的时候都带着花苞，所以基本上开一轮花应该不是问题，本应该这样，但是实际上第一波花开了的只有真宙和水滴。<br>
+真宙和心之水滴很快就开花了，表现良好，但是季节正好是夏，魔都持续高温，再加上是初花，所以花型很散，基本看不出什么型，但是颜色对版，特别是真宙还有股水果香味，还算美丽。</p><p>原本最期待的蓝色系的诺瓦利斯并没有那么顺利的开花。刚出两个花苞的那边魔都开始进入到午后暴雨定番的时候了，本应在日程上的盛放就被不断推迟，知道最后艰难的开出了两朵粉色的小花，且当天下午所有花瓣就被暴雨冲落了。o(╥﹏╥)o</p><a id="more"></a>
+
+<p>这里不得不说夸一下真宙，截止到9月底，真宙开花数超过了10朵且花型肉眼可见的越来越标准，越来越包子，总共开了三波的花，开花机器名不虚传。</p>
+<p>尝到甜头之后在8月又入了三个品种：黑巴克，夏洛特夫人，羽毛。</p>
+<p>羽毛很不幸的在拆开快递的时候发现一个花苞和一根枝条已经折断了，但是夏洛特夫人和黑巴克状态很棒，不久之后就开花了<br>
+黑巴克真的惊艳，夏洛特夫人花型在初花的时候就已经很棒了，羽毛颜色也很不错，这次虽然有遗憾，少了一朵花和枝条，但是初花的花型是真的美。<br>
+<img src="/2019/10/13/life-flowers/2.jpg" alt="黑巴克第一天"><img src="/2019/10/13/life-flowers/3.jpg" alt="黑巴克第二天淋雨了"><img src="/2019/10/13/life-flowers/4.jpg" alt="黑巴克第三天"></p>
+<p>但是这个三个品种明显开花的频率比不上开花机器，截止到9月底，再打了花苞的只有黑巴克<br>
+<img src="/2019/10/13/life-flowers/1.jpg" alt="黑巴克和心之水滴"><br>
+黑巴克实物真的很黑，从花心向外呈黑色到红色的渐变<br>
+<em>蓟马，蚜虫</em></p>
+<p>国庆节前后遭遇了一波病虫害，这种时候就能看出来月季不同品种的抗病性的强弱。很明显黑巴克是已拥有的六个品种中抗病性最弱的。蚍虫林兑水喷洒到叶片上直到能滴水为止，大概三天蓟马和蚜虫都消失了。<br>
+蚜虫和蓟马没了之后，大部分月季都开始继续一波发芽和生长，但是黑巴克又招了不知道哪里来的小毛虫，抗病性啊抗病性，蚍虫林继续喷也解决了。</p>
+<p><em>修剪狂魔</em></p>
+<p>每个人养花草都会有自己的风格，我觉得用个词来形容我的风格的话可能是，修剪狂魔。</p>
+<p>好在月季比较皮实，不怕我的修剪，尤其是夏洛特夫人，真宙和诺瓦利斯，同样修剪后追肥的操作，这三个品种对这个操作的受用度最高，诺瓦利斯和夏洛特表现是向上不断生长，真宙则是在中间段出芽同时苗也越来越壮了，竖向生长和横向生长的区别。</p>
+<p>夏洛特长太高了，于是给它放了个爬藤架，把枝条沿S形固定到架子上，很多博主说这样有利于打破顶端优势，有利于多花。过几个月看情况吧</p>
+<hr>
+<p>月季真的是个剁手的玩意儿啊，太上瘾了！！<br>
+10月13号，又入了7颗品种的月季，顺便还入了两颗铁线莲。<br>
+月季分别是：</p>
+<p style="color: #a48999;margin:0;">蜻蜓 [紫色系] [蕾丝花瓣边] </p>
+<p style="color: #e77630;margin:0">永远的那不勒斯 [橙色系] [从外往内红至金色的渐变色，整体复古色系] [耐晒需要勤修剪，不然会长很大] [小苗单头开花，大苗会多头]</p>
+<p style="color: #c0445d;margin:0">金边玫瑰 [红色系] [可食用]</p>
+<p style="color: #8b6778;margin:0">和室 [粉色系] [外瓣为深粉色，内花主要为白色或者非常淡的粉色] [开花机器] [枝条软] [包子]</p>
+<p style="color: #8e5ea3;margin:0">海洋之歌 [蓝色系] [花型为玫瑰型]</p>
+<p style="color: #de989c;margin:0">瑞典女王 [杏粉色] [花型优雅]</p>
+<p style="color: #e36393;margin:0">京 [粉色系] [多头开花] [开花机器] </p>
+<p>铁线莲：<br>
+乌托邦[单瓣] [粉白色] [极易养护] [叶片很绿]<br>
+魔法喷泉 [重瓣] [正紫色系] [花实在是华丽] [叶片有紫色纹路]</p>
+<hr>
+<p>9.15 新买的那7颗月季在路上耽搁了3天总算是的到了，到手又是惊呆，原本以为是8朵，店家居然又送了两颗，总共9朵，9朵大部分都带着花来的，有些花都已经盛开了，所以在快递箱里掉了很多的花瓣<br>
+<img src="/2019/10/13/life-flowers/5.jpg" alt></p>
+<p>既然到手了，那就来记录一下到手的时候9颗的状态和第一印象好了<br>
+叶序，脉序，花序，花冠<br>
+<code>和室</code>: -首先和室是带着花苞来的，花苞打的很大，但是很可惜的是，花苞整个掉落了。光看花苞也能看到颜色很美<br>
+花萼首先是正统月季的光滑五片花萼<br>
+<img src="/2019/10/13/life-flowers/6.jpg" alt="和室掉下来的花苞"></p>
+<p><code>奇异盛典</code> ：- 奇异盛典是店家送的。<br>
+叶子：乍一看，叶片有规则的锯齿，嫩叶为红绿色到绿色，带红边，红叶柄，单数羽状复叶，一柄上最多有7片叶子，总体来说和玫瑰较为相似<br>
+花苞： 无花苞。<br>
+枝条： 绿色，直立性较强，较为粗壮<br>
+刺：短且硬直，较为密集，可轻易掰下，<br>
+<img src="/2019/10/13/life-flowers/7.jpg" alt="奇异盛典叶片"></p>
+<p><code>温柔水晶</code>： 也是店家送的。<br>
+<code>蜻蜓</code>: 带着花苞来的额，第二天就盛放了，完全不包，散开状，花瓣波浪边，较硬，硬的花瓣真的挺特别的，花瓣也不易掉落，很适合当切花。<br>
+有花香味，具体形容的话就是鲜花饼内馅儿的香味，闻得我想吃鲜花饼了。</p>
+<p>永远的那不勒斯<br>
+金边玫瑰<br>
+海洋之歌<br>
+瑞典女王<br>
+京</p>
 
     </div>
 
@@ -326,7 +371,7 @@
     <strong>本文作者： </strong>Qian Lina</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/10/09/about-performance/" title="前端性能优化总结">http://yoursite.com/2019/10/09/about-performance/</a>
+    <a href="http://yoursite.com/2019/10/13/life-flowers/" title="养花大爷">http://yoursite.com/2019/10/13/life-flowers/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -341,7 +386,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+              <a href="/tags/日常/" rel="tag"># 日常</a>
             
           </div>
         
@@ -351,8 +396,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/10/08/more-settings/" rel="next" title="HEXO更多配置">
-                  <i class="fa fa-chevron-left"></i> HEXO更多配置
+                <a href="/2019/10/11/import-three/" rel="next" title="three.js学习笔记">
+                  <i class="fa fa-chevron-left"></i> three.js学习笔记
                 </a>
               
             </div>
@@ -360,10 +405,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/10/09/commit/" rel="prev" title="前端常用commit规范">
-                  前端常用commit规范 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -409,8 +450,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码写法"><span class="nav-number">1.</span> <span class="nav-text">¶代码写法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#内存释放"><span class="nav-number">1.1.</span> <span class="nav-text">¶内存释放</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#常用数据优化的方法"><span class="nav-number">1.2.</span> <span class="nav-text">¶常用数据优化的方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#框架内自带优化方法"><span class="nav-number">1.3.</span> <span class="nav-text">¶框架内自带优化方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据接收"><span class="nav-number">2.</span> <span class="nav-text">¶数据接收</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据渲染"><span class="nav-number">3.</span> <span class="nav-text">¶数据渲染</span></a></li></ol></div>
-        
       </div>
       <!--/noindex-->
 

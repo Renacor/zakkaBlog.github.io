@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="¶变量的解构赋值 12345678function move(&amp;#123;x = 0, y = 0&amp;#125; = &amp;#123;&amp;#125;) &amp;#123;  return [x, y];&amp;#125;move(&amp;#123;x: 3, y: 8&amp;#125;); // [3, 8]move(&amp;#123;x: 3&amp;#125;); // [3, 0]move(&amp;#123;&amp;#125;); // [0, 0">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-11T02:47:49.209Z">
+<meta property="og:updated_time" content="2019-10-15T07:31:41.179Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6学习笔记">
 <meta name="twitter:description" content="¶变量的解构赋值 12345678function move(&amp;#123;x = 0, y = 0&amp;#125; = &amp;#123;&amp;#125;) &amp;#123;  return [x, y];&amp;#125;move(&amp;#123;x: 3, y: 8&amp;#125;); // [3, 8]move(&amp;#123;x: 3&amp;#125;); // [3, 0]move(&amp;#123;&amp;#125;); // [0, 0">
@@ -263,7 +263,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-11 10:47:49" itemprop="dateModified" datetime="2019-10-11T10:47:49+08:00">2019-10-11</time>
+                <time title="修改时间：2019-10-15 15:31:41" itemprop="dateModified" datetime="2019-10-15T15:31:41+08:00">2019-10-15</time>
               </span>
             
           
@@ -324,6 +324,16 @@
 <p>浏览器还部署了额外的两个方法，<code>trimLeft()</code>是<code>trimStart()</code>的别名，<code>trimRight()</code>是<code>trimEnd()</code>的别名。</p>
 <h5 id="matchall"><a class="header-anchor" href="#matchall">¶</a>matchAll()</h5>
 <p>matchAll()方法返回一个正则表达式在当前字符串的所有匹配(暂时不理解，正则相关需另起一章)</p>
+<h5 id="最后整理的的零碎小东西"><a class="header-anchor" href="#最后整理的的零碎小东西">¶</a>最后整理的的零碎小东西</h5>
+<ol>
+<li><code>Math.max()和Math.min()</code><br>
+这两个方法在ES6中改进了，原先不允许传入数组，ES6之后可支持数组。<br>
+早前如果想要用这两个方法得出数组的最大和最小值，需要这样写：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var values = [12, 15, 0, 20, -1];</span><br><span class="line">var max = Math.max.apply(Math, values);// 20</span><br></pre></td></tr></table></figure>
+<p>但是在ES6中我们可以这样写：<br>
+用于ES6使用了展开运算符“…”,JavaScript引擎读取后会将参数数组分割为各自独立的参数并依次传入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let values = [12, 15, 0, 20, -1];</span><br><span class="line">let max1 = Math.max(...values);//20</span><br><span class="line">let min1 = Math.min(...values);//-1</span><br><span class="line">let max2 = Math.max(...values, 100)//100</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -423,7 +433,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的解构赋值"><span class="nav-number">1.</span> <span class="nav-text">¶变量的解构赋值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串扩展"><span class="nav-number">2.</span> <span class="nav-text">¶字符串扩展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串-string-实例方法"><span class="nav-number">3.</span> <span class="nav-text">¶字符串(String)实例方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#includes-startswith-和endswith"><span class="nav-number">3.1.</span> <span class="nav-text">¶includes(),startsWith()和endsWith()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#repeat-count"><span class="nav-number">3.2.</span> <span class="nav-text">¶repeat(count)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#padstart-padend"><span class="nav-number">3.3.</span> <span class="nav-text">¶padStart()，padEnd()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#trimstart-trimend"><span class="nav-number">3.4.</span> <span class="nav-text">¶trimStart()，trimEnd()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#matchall"><span class="nav-number">3.5.</span> <span class="nav-text">¶matchAll()</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的解构赋值"><span class="nav-number">1.</span> <span class="nav-text">¶变量的解构赋值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串扩展"><span class="nav-number">2.</span> <span class="nav-text">¶字符串扩展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串-string-实例方法"><span class="nav-number">3.</span> <span class="nav-text">¶字符串(String)实例方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#includes-startswith-和endswith"><span class="nav-number">3.1.</span> <span class="nav-text">¶includes(),startsWith()和endsWith()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#repeat-count"><span class="nav-number">3.2.</span> <span class="nav-text">¶repeat(count)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#padstart-padend"><span class="nav-number">3.3.</span> <span class="nav-text">¶padStart()，padEnd()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#trimstart-trimend"><span class="nav-number">3.4.</span> <span class="nav-text">¶trimStart()，trimEnd()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#matchall"><span class="nav-number">3.5.</span> <span class="nav-text">¶matchAll()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#最后整理的的零碎小东西"><span class="nav-number">3.6.</span> <span class="nav-text">¶最后整理的的零碎小东西</span></a></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -442,7 +452,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -455,7 +465,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -468,7 +478,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -500,7 +510,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -509,12 +519,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">9k</span>
+    <span title="站点总字数">25k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">8 分钟</span>
+    <span title="站点阅读时长">22 分钟</span>
 </div>
 
         

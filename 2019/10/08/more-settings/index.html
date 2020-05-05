@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="实际使用一个主题时，有很多常用的细节上的配置在主题初始时并不会设置好，需要手动找到配置文件中相对应的项进行设置，以目前我正在使用的NextT主题为例,记录下如何进行细节配置。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-10T01:42:14.385Z">
+<meta property="og:updated_time" content="2019-10-14T02:38:28.707Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HEXO更多配置">
 <meta name="twitter:description" content="实际使用一个主题时，有很多常用的细节上的配置在主题初始时并不会设置好，需要手动找到配置文件中相对应的项进行设置，以目前我正在使用的NextT主题为例,记录下如何进行细节配置。">
@@ -263,7 +263,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-10 09:42:14" itemprop="dateModified" datetime="2019-10-10T09:42:14+08:00">2019-10-10</time>
+                <time title="修改时间：2019-10-14 10:38:28" itemprop="dateModified" datetime="2019-10-14T10:38:28+08:00">2019-10-14</time>
               </span>
             
           
@@ -320,6 +320,12 @@ nextT自带的字数统计工具是<em>hexo-symbols-count-time</em>，首先需�
 <h4 id="评论-打赏-rss功能"><a class="header-anchor" href="#评论-打赏-rss功能">¶</a>评论，打赏，RSS功能</h4>
 <h4 id="广告位-x"><a class="header-anchor" href="#广告位-x">¶</a>广告位(X</h4>
 <h4 id="配置live2d宠物"><a class="header-anchor" href="#配置live2d宠物">¶</a>配置live2d宠物</h4>
+<h4 id="文章首页完美隐藏"><a class="header-anchor" href="#文章首页完美隐藏">¶</a>文章首页完美隐藏</h4>
+<p>下载hexo-generator-index2插件后卸载官方的插件hexo-generator-index</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-index2 --save</span><br><span class="line">$ npm uninstall hexo-generator-index --save</span><br></pre></td></tr></table></figure>
+<p>打开根目录的<code>_config.yml</code>，在末尾添加一下内容，注意空格和缩进</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># index2 generator是否包含官方的hexo-generator-index，默认true（包含）</span></span><br><span class="line"><span class="attr">index2_include_index:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">index2_generator:</span></span><br><span class="line">	<span class="attr">per_page:</span> <span class="number">8</span></span><br><span class="line">	<span class="attr">order_by:</span> <span class="bullet">-date</span></span><br><span class="line">	<span class="attr">exclude:</span></span><br><span class="line">		<span class="bullet">-</span> <span class="string">tag</span> <span class="string">hide</span></span><br><span class="line">		<span class="bullet">-</span> <span class="string">category</span> <span class="string">hide</span></span><br></pre></td></tr></table></figure>
+<p><code>exclude</code>:表示隐藏哪些内容，以上代码表示隐藏tag为hide和category(分类)为hide的文章</p>
 <p><a href="https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md" target="_blank" rel="noopener">hexo-helper-live2d</a></p>
 
     </div>
@@ -420,7 +426,7 @@ nextT自带的字数统计工具是<em>hexo-symbols-count-time</em>，首先需�
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#显示语言设置"><span class="nav-number">1.</span> <span class="nav-text">¶显示语言设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#首页不显示全文"><span class="nav-number">2.</span> <span class="nav-text">¶首页不显示全文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#首页出现菜单内容以及菜单内容对应路径文件"><span class="nav-number">3.</span> <span class="nav-text">¶首页出现菜单内容以及菜单内容对应路径文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章添加分类和tag"><span class="nav-number">4.</span> <span class="nav-text">¶文章添加分类和tag</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章插入图片"><span class="nav-number">5.</span> <span class="nav-text">¶文章插入图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改样式和添加自定义样式"><span class="nav-number">6.</span> <span class="nav-text">¶修改样式和添加自定义样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章字数统计和预计阅读时长"><span class="nav-number">7.</span> <span class="nav-text">¶文章字数统计和预计阅读时长</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#评论-打赏-rss功能"><span class="nav-number">8.</span> <span class="nav-text">¶评论，打赏，RSS功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#广告位-x"><span class="nav-number">9.</span> <span class="nav-text">¶广告位(X</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置live2d宠物"><span class="nav-number">10.</span> <span class="nav-text">¶配置live2d宠物</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#显示语言设置"><span class="nav-number">1.</span> <span class="nav-text">¶显示语言设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#首页不显示全文"><span class="nav-number">2.</span> <span class="nav-text">¶首页不显示全文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#首页出现菜单内容以及菜单内容对应路径文件"><span class="nav-number">3.</span> <span class="nav-text">¶首页出现菜单内容以及菜单内容对应路径文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章添加分类和tag"><span class="nav-number">4.</span> <span class="nav-text">¶文章添加分类和tag</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章插入图片"><span class="nav-number">5.</span> <span class="nav-text">¶文章插入图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改样式和添加自定义样式"><span class="nav-number">6.</span> <span class="nav-text">¶修改样式和添加自定义样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章字数统计和预计阅读时长"><span class="nav-number">7.</span> <span class="nav-text">¶文章字数统计和预计阅读时长</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#评论-打赏-rss功能"><span class="nav-number">8.</span> <span class="nav-text">¶评论，打赏，RSS功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#广告位-x"><span class="nav-number">9.</span> <span class="nav-text">¶广告位(X</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置live2d宠物"><span class="nav-number">10.</span> <span class="nav-text">¶配置live2d宠物</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章首页完美隐藏"><span class="nav-number">11.</span> <span class="nav-text">¶文章首页完美隐藏</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -439,7 +445,7 @@ nextT自带的字数统计工具是<em>hexo-symbols-count-time</em>，首先需�
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -452,7 +458,7 @@ nextT自带的字数统计工具是<em>hexo-symbols-count-time</em>，首先需�
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -465,7 +471,7 @@ nextT自带的字数统计工具是<em>hexo-symbols-count-time</em>，首先需�
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -497,7 +503,7 @@ nextT自带的字数统计工具是<em>hexo-symbols-count-time</em>，首先需�
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -506,12 +512,12 @@ nextT自带的字数统计工具是<em>hexo-symbols-count-time</em>，首先需�
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">9k</span>
+    <span title="站点总字数">25k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">8 分钟</span>
+    <span title="站点阅读时长">22 分钟</span>
 </div>
 
         
