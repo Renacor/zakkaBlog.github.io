@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"always","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="记录博客配置的全过程。">
+<meta name="keywords" content="配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="First Blog">
+<meta property="og:url" content="http://yoursite.com/2019/10/08/first-blog/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="记录博客配置的全过程。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-09T08:43:18.993Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="First Blog">
+<meta name="twitter:description" content="记录博客配置的全过程。">
+  <link rel="canonical" href="http://yoursite.com/2019/10/08/first-blog/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>First Blog | Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/08/first-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Qian Lina">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">First Blog
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-08 14:05:01" itemprop="dateCreated datePublished" datetime="2019-10-08T14:05:01+08:00">2019-10-08</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 16:43:18" itemprop="dateModified" datetime="2019-10-09T16:43:18+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/HEXO/" itemprop="url" rel="index"><span itemprop="name">HEXO</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>记录博客配置的全过程。</p>
+ <a id="more"></a>
+<h4 id="前置准备"><a class="header-anchor" href="#前置准备">¶</a>前置准备</h4>
+<ol>
+<li>node.js和npm</li>
+<li>git</li>
+</ol>
+<h4 id="安装hexo"><a class="header-anchor" href="#安装hexo">¶</a>安装HEXO</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli  </span><br><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
+<h4 id="新建项目并运行"><a class="header-anchor" href="#新建项目并运行">¶</a>新建项目并运行</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br><span class="line">$ cd blog</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>至此博客项目新建完成</p>
+<h4 id="更换主题"><a class="header-anchor" href="#更换主题">¶</a>更换主题</h4>
+<ol>
+<li>找到喜欢的主题的github地址</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/NewThemeName</span><br><span class="line">cd themes/NewThemeName</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>主题修改配置<br>
+修改blog目录下的 _config.yml ： theme: NewThemeName</li>
+</ol>
+<h4 id="配置github"><a class="header-anchor" href="#配置github">¶</a>配置GitHub</h4>
+<ol>
+<li>申请一个github账号且完成邮箱验证</li>
+<li>新建Repository(仓库)</li>
+<li>新仓库的名称命名格式<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用户名.github.io</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>配置git信息</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name&quot;这里是你申请Github账号时的name&quot;</span><br><span class="line">git config --global user.email&quot;这里是你申请Github账号时的邮箱&quot;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>部署。进入blog目录下,编辑 _config.yml，把下面的your_username换成你的github用户名，注意冒号后面有一空格。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: https://github.com/your_username/your_username.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<h4 id="部署代码到github"><a class="header-anchor" href="#部署代码到github">¶</a>部署代码到Github</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean // 清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span><br><span class="line">$ hexo d -g // 生成静态文件并部署</span><br></pre></td></tr></table></figure>
+<h4 id="发布新文章"><a class="header-anchor" href="#发布新文章">¶</a>发布新文章</h4>
+<p>新建文章推荐使用命令行执行<code>hexo n “newFileName”</code>，也可直接编辑器打开项目，在<em>source/_posts</em>目录下新建.md文章</p>
+<p>生成静态文件: <code>hexo g</code><br>
+提交到github: <code>hexo d</code></p>
+<h4 id="添加版权说明"><a class="header-anchor" href="#添加版权说明">¶</a>添加版权说明</h4>
+<p>在<em>themes\hiker\layout_partial新建文件copyright.ejs</em><br>
+打开<em>copyright.ejs</em>,添加一下内容。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"post-copyright"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"post-copyright-author"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">__</span>('<span class="attr">copyright.author</span>') %&gt;</span> <span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.author</span>%&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"post-copyright-link"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">__</span>('<span class="attr">copyright.link</span>') %&gt;</span> <span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- config.root %&gt;&lt;%- post.path %&gt;"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"&lt;%= post.title %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">config.url</span> %&gt;</span>/<span class="tag">&lt;<span class="name">%-</span> <span class="attr">post.path</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"post-copyright-license"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">__</span>('<span class="attr">copyright.license_title</span>') %&gt;</span>  <span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">%=</span> <span class="attr">__</span>('<span class="attr">copyright.left_license_content</span>') %&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">rel</span>=<span class="string">"license"</span> <span class="attr">href</span>=<span class="string">"https://creativecommons.org/licenses/by-nc-nd/4.0/"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"</span>&gt;</span>CC BY-NC-ND 4.0<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">%=</span> <span class="attr">__</span>('<span class="attr">copyright.right_license_content</span>') %&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>打开<em>themes\hiker\layout_partial\article.ejs</em>添加一下内容,位置介于<em>donate</em>和c<em>omment</em>之间</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">theme.donate.enable</span>)&#123; %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">donate</span>') %&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">       <span class="comment">&lt;!-- 要添加的内容 --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">theme.copyright.enable</span>)&#123; %&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">copyright</span>') %&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">      <span class="comment">&lt;!----&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">post.comments</span> &amp;&amp; (<span class="attr">theme.gentie_productKey</span> || <span class="attr">theme.duoshuo_shortname</span> || <span class="attr">theme.disqus_shortname</span> || <span class="attr">theme.uyan_uid</span> || <span class="attr">theme.wumii</span> || <span class="attr">theme.livere_shortname</span>))&#123; %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">comment</span>') %&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<p>修改<em>themes\hiker\source\css_partial\article.styl</em>,在末端添加以下内容。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.post-copyright</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">2em</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0.5em</span> <span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">3px</span> solid <span class="number">#FF1700</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#F9F9F9</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.post-copyright</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">30px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在<em>themes\hiker\languages</em>中,找到你应用的语言文件,例如zh-TW,打开并添加以下内容。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">copyright:</span></span><br><span class="line"><span class="attr">    author:</span> <span class="string">"作者: "</span></span><br><span class="line"><span class="attr">    link:</span> <span class="string">"文章连结: "</span></span><br><span class="line"><span class="attr">    license_title:</span> <span class="string">"版权声明: "</span></span><br><span class="line"><span class="attr">    left_license_content:</span> <span class="string">"本网志所有文章除特别声明外,均采用 "</span></span><br><span class="line"><span class="attr">    right_license_content:</span> <span class="string">"许可协议。转载请注明出处!"</span></span><br></pre></td></tr></table></figure>
+<p>打开<em>themes\hiker_config.yml</em>,添加以下内容。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#版权信息</span></span><br><span class="line"><span class="attr">copyright:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h4 id="markdown解析器替换"><a class="header-anchor" href="#markdown解析器替换">¶</a>markdown解析器替换</h4>
+<p>hexo自带的markdown解析器为GFM风格，与标准的markdown语法有些许不同且支持的语法较少，往往无法满足更专业的需求。<br>
+hexo-renderer-markdown-it 是一款用于 Markdown 解析和渲染的插件。</p>
+<ul>
+<li>用于替换 Hexo 默认自带的 Markdown 渲染器。</li>
+<li>提供了更丰富的 Markdown 解析和渲染。</li>
+</ul>
+<p><strong>首先请确保以下操作是在博客项目的根目录进行</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save // 卸载 Hexo 默认自带的 Markdown 渲染器</span><br><span class="line">npm i hexo-renderer-markdown-it --save // 安装 hexo-renderer-markdown-it 插件</span><br></pre></td></tr></table></figure>
+<p>打开根目录下的_config.yml</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line"><span class="attr">markdown:</span></span><br><span class="line"><span class="attr">  render:</span></span><br><span class="line"><span class="attr">    html:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    xhtmlOut:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">    breaks:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    linkify:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    typographer:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    quotes:</span> <span class="string">'“”‘’'</span></span><br><span class="line"><span class="attr">  plugins:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">markdown-it-abbr</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">markdown-it-footnote</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">markdown-it-ins</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">markdown-it-sub</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">markdown-it-sup</span></span><br><span class="line"><span class="attr">  anchors:</span></span><br><span class="line"><span class="attr">    level:</span> <span class="number">2</span></span><br><span class="line"><span class="attr">    collisionSuffix:</span> <span class="string">'v'</span></span><br><span class="line"><span class="attr">    permalink:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    permalinkClass:</span> <span class="string">header-anchor</span></span><br><span class="line"><span class="attr">    permalinkSymbol:</span> <span class="string">¶</span></span><br></pre></td></tr></table></figure><hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>名称后缀是固定的，不可更改。当配置完成后在github访问域名时，如进去的页面显示404，解决的方法为：①配置个人域名②仓库的名称改为github的用户名 <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
+
+    </div>
+
+    
+    
+    
+        
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Qian Lina</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/10/08/first-blog/" title="First Blog">http://yoursite.com/2019/10/08/first-blog/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+</div>
+
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/配置/" rel="tag"># 配置</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/10/08/hello-world/" rel="next" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/10/08/more-settings/" rel="prev" title="HEXO更多配置">
+                  HEXO更多配置 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前置准备"><span class="nav-number">1.</span> <span class="nav-text">¶前置准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装hexo"><span class="nav-number">2.</span> <span class="nav-text">¶安装HEXO</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新建项目并运行"><span class="nav-number">3.</span> <span class="nav-text">¶新建项目并运行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更换主题"><span class="nav-number">4.</span> <span class="nav-text">¶更换主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置github"><span class="nav-number">5.</span> <span class="nav-text">¶配置GitHub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#部署代码到github"><span class="nav-number">6.</span> <span class="nav-text">¶部署代码到Github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#发布新文章"><span class="nav-number">7.</span> <span class="nav-text">¶发布新文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加版权说明"><span class="nav-number">8.</span> <span class="nav-text">¶添加版权说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#markdown解析器替换"><span class="nav-number">9.</span> <span class="nav-text">¶markdown解析器替换</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.gif"
+      alt="Qian Lina">
+  <p class="site-author-name" itemprop="name">Qian Lina</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Qian Lina</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">9k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">8 分钟</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.1"></script><script src="/js/motion.js?v=7.4.1"></script>
+<script src="/js/schemes/pisces.js?v=7.4.1"></script>
+<script src="/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>
